@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #f0faf4;
+  --color-brand-100: #d9f2e4;
+  --color-brand-200: #b0e4c7;
+  --color-brand-300: #6fcf97;
+  --color-brand-400: #3cb371;
+  --color-brand-500: #27835a;
+  --color-brand-600: #1d6b48;
+  --color-brand-700: #175539;
+  --color-brand-800: #0f3a27;
+  --color-brand-900: #0a2319;
+
+  --color-inst-50: #f0f4fa;
+  --color-inst-100: #dbe4f3;
+  --color-inst-500: #2c5f9e;
+  --color-inst-600: #1e4a82;
+  --color-inst-700: #163a68;
+
+  --color-sand-50: #faf9f6;
+  --color-sand-100: #f3f1ec;
+  --color-sand-200: #e8e4db;
+  --color-sand-300: #d6d0c4;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-sand-50);
+  color: #1a1a1a;
+}
+
+/* custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-sand-300); border-radius: 3px; }
+
+/* fade-in animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fadeUp 0.5s ease-out both;
+}
+
+/* stagger children */
+.stagger > * { animation: fadeUp 0.45s ease-out both; }
+.stagger > *:nth-child(1) { animation-delay: 0.05s; }
+.stagger > *:nth-child(2) { animation-delay: 0.12s; }
+.stagger > *:nth-child(3) { animation-delay: 0.19s; }
+.stagger > *:nth-child(4) { animation-delay: 0.26s; }
+
+/* pulse ring on loading */
+@keyframes pulseRing {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+.pulse-ring {
+  animation: pulseRing 1.4s ease-out infinite;
+}
