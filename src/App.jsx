@@ -19,7 +19,7 @@ export default function App() {
             </div>
             <div>
               <h1 className="font-display text-lg font-bold leading-tight text-brand-800">
-                MenuGen-DIF <span className="text-brand-400">v2</span>
+                MenuGen-DIF <span className="text-brand-400"></span>
               </h1>
               <p className="text-[10px] text-sand-300 leading-none -mt-0.5">
                 Optimización de Menús Escolares · Chiapas
